@@ -26,14 +26,14 @@ export default function Home() {
           rel="stylesheet"
         ></link>
       </Head>
-      <div className="snap-mandatory h-screen grid overflow-x-hidden 2xl:snap-y justify-center">
-        <FirstSection />
-        <SecondSection />
-        <ThirdSection />
-        <FourthSection />
-        <FifthSection />
-        <SixthSection />
-        <SeventhSection/>
+        <div className="snap-mandatory h-screen grid overflow-x-hidden 2xl:snap-y justify-center">
+          <FirstSection />
+          <SecondSection />
+          <ThirdSection />
+          <FourthSection />
+          <FifthSection />
+          <SixthSection />
+          <SeventhSection />
       </div>
     </>
   );
