@@ -4,7 +4,7 @@ import Image from "next/image";
 function FifthSection() {
   return (
     <div className="snap-start relative h-screen flex flex-col items-center">
-      <div className='m-auto'>
+      <div className="m-auto">
         <div className="font-firaSans text-[rgb(17,17,17)] font-bold md:mb-[20px] mt-[700px] sm:mt-[1900px] md:mt-[1100px] lg:mt-[2600px] 2xl:my-0 text-[48px] md:text-[64px] text-center 2xl:mb-[50px]">
           Ihre Partner
         </div>
@@ -35,8 +35,8 @@ function FifthSection() {
           </div>
         </div>
         <div className="font-workSans text-[24px] md:text-[24px] mt-[20px] max-w-[90vw] 2xl:max-w-screen text-center">
-          unser Team von Programmierern wird durch ausgesuchte Experten aus
-          unserem Netzwerk ergänzt
+          UNSER TEAM VON PROGRAMMIERERN WIRD DURCH AUSGESUCHTE EXPERTEN AUS
+          UNSEREM NETZWERK ERGÄNZT
         </div>
       </div>
     </div>

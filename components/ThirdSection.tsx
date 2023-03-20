@@ -39,7 +39,7 @@ function ThirdSection() {
               bestrebt, Ihnen einen persönlichen Service und Support zu bieten.
               Dank unseres maßgeschneiderten Ansatzes können Sie darauf
               vertrauen, dass Ihre Interessen stets unsere höchste Priorität
-              genießen. vertraut.
+              genießen.
             </div>
           </div>
           <div className="flex flex-col content-center mx-[5px]">
