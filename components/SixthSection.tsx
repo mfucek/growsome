@@ -5,14 +5,12 @@ function SixthSection() {
   return (
     <div className="snap-start relative h-screen w-screen flex justify-center">
       <div className="flex mt-[1700px] sm:mt-[2850px] md:mt-[2050px] lg:mt-[3900px] 2xl:mt-[0px]">
-        <div className="hidden 2xl:block">
-          <div className="h-[96.8vh] min-w-[600px] -ml-[00px] -mr-[50px] my-[1.6vh] object-scale-down relative hidden 2xl:block">
+          <div className="h-[96.8vh] min-w-[90vh] object-cover my-[1.6vh] -mr-[50px] relative hidden 2xl:block">
             <Image
               src="/../public/Growsome5.png"
               alt="Image Not Found"
               fill
             ></Image>
-          </div>
         </div>
         <div className="flex flex-col">
           <div className="flex">

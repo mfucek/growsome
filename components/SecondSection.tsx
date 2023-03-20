@@ -8,7 +8,7 @@ function SecondSection() {
         <img
           src="https://pitch-assets-ccb95893-de3f-4266-973c-20049231b248.s3.eu-west-1.amazonaws.com/51edb74b-2980-428d-a1f6-1d5d7234fcf7?pitch-bytes=3069880&pitch-content-type=image%2Fjpeg"
           alt="Image Not Found"
-          className=" object-cover my-[1.6vh] max-h-[700px] hidden 2xl:block"
+          className=" object-cover my-[1.6vh] h-[96vh] hidden 2xl:block"
         />
       </div>
       <div className="flex flex-col">
