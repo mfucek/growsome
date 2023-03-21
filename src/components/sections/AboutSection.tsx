@@ -17,7 +17,7 @@ export const AboutSection = () => {
 					</div>
 				</div>
 				<div className="grow w-full">
-					<div className="px-6 h-full flex flex-col xl:justify-center">
+					<div className="px-2 md:px-6 h-full flex flex-col xl:justify-center">
 						<h2 className="display-1 display-1 mb-8">Auf einen Blick</h2>
 						<div>
 							<h3 className="display-2 mb-6">Ihr erfolg ist unser antrieb</h3>

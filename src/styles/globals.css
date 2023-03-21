@@ -11,20 +11,20 @@
 }
 
 .display-1 {
-	@apply font-firaSans text-[60px] font-bold text-[#111111];
+	@apply font-firaSans text-[32px] md:text-[60px] font-bold text-[#111111];
 }
 
 .display-2 {
-	@apply font-workSans text-[30px] text-[#111111] tracking-[0.15em] uppercase;
+	@apply font-workSans text-[24px] md:text-[30px] text-[#111111] tracking-[0.1em] md:tracking-[0.15em] uppercase;
 }
 
 .display-3 {
-	@apply font-firaSans text-[28px] text-[#111111] tracking-[0.1em];
+	@apply font-firaSans text-[20px] md:text-[28px] text-[#111111] tracking-[0.1em];
 }
 
 p,
 li {
-	@apply font-firaSans  text-[28px] leading-[33px] text-[#5d5d5d];
+	@apply font-firaSans text-[16px] md:text-[28px] leading-[28px] md:leading-[33px] text-[#5d5d5d];
 }
 
 ul {

@@ -17,7 +17,7 @@ export const Services2Section = () => {
 					</div>
 				</div>
 				<div className="grow w-full">
-					<div className="px-6 h-full flex flex-col xl:justify-center">
+					<div className="px-2 md:px-6 h-full flex flex-col xl:justify-center">
 						<h2 className="display-1 mb-8">Unser Service</h2>
 						<div>
 							<p className="mb-8">
