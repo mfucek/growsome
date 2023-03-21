@@ -29,7 +29,16 @@ export const Header = () => {
 							scrolled && 'bg-white/80 backdrop-blur-md'
 						)}
 					>
-						<Image src={'/logo.png'} height={24} width={153} alt={''} />
+						<Image
+							src={'/logo.png'}
+							height={24}
+							width={153}
+							alt={''}
+							className="hover:translate-y-[-2px] active:translate-y-[4px] duration-300 active:duration-100 cursor-pointer hover:opacity-80 active:opacity-60"
+							onClick={() => {
+								window.scrollTo({ top: 0, behavior: 'smooth' });
+							}}
+						/>
 					</div>
 				</Container>
 			</header>
