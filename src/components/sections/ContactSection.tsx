@@ -78,12 +78,13 @@ export const ContactSection = () => {
 							fill
 							alt={''}
 							style={{ objectFit: 'cover' }}
+							sizes={'(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
 						/>
 					</div>
 				</div>
 				<div className="grow w-full">
 					<div className="px-6 h-full flex flex-col xl:justify-center">
-						<h1 className="mb-8">Kontakt</h1>
+						<h2 className="display-1 display-1 mb-8">Kontakt</h2>
 						<div>
 							<p className="mb-20">
 								Wir freuen uns über Ihr Interesse, uns und unsere Services näher
@@ -97,10 +98,10 @@ export const ContactSection = () => {
 								<br />
 								22085 Hamburg
 							</p>
-							<h3 className="mb-2">Telefon</h3>
+							<h3 className="display-3 mb-2">Telefon</h3>
 							<p className="mb-12">+49 175 2517038</p>
 
-							<h3 className="mb-2">WEB</h3>
+							<h3 className="display-3 mb-2">WEB</h3>
 							<p>
 								hello@growsome.agency
 								<br />

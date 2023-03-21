@@ -12,19 +12,11 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>growsome</title>
-				<link rel="preconnect" href="https://fonts.googleapis.com"></link>
-				<link rel="preconnect" href="https://fonts.gstatic.com"></link>
-				<link
-					href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap"
-					rel="stylesheet"
-				></link>
-				<link rel="preconnect" href="https://fonts.googleapis.com"></link>
-				<link rel="preconnect" href="https://fonts.gstatic.com"></link>
-				<link
-					href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap"
-					rel="stylesheet"
-				></link>
+				<title>Growsome - Experte für digitale Transformation </title>
+				<meta
+					name="description"
+					content="Wir sind Experten für digitale Transformation mit umfassender Erfahrung im Bereich E-Commerce, Skalierung von Online-Plattformen und data driven Performance-Optimierung"
+				/>
 			</Head>
 			<div className="w-screen overflow-x-hidden">
 				<Header />

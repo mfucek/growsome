@@ -12,19 +12,20 @@ export const Services2Section = () => {
 							fill
 							alt={''}
 							style={{ objectFit: 'cover' }}
+							sizes={'(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
 						/>
 					</div>
 				</div>
 				<div className="grow w-full">
 					<div className="px-6 h-full flex flex-col xl:justify-center">
-						<h1 className="mb-8">Unser Service</h1>
+						<h2 className="display-1 mb-8">Unser Service</h2>
 						<div>
 							<p className="mb-8">
 								Wir arbeiten agil und verzichten dabei auf alles, was keinen
 								direkten Wert für den Kunden schafft. Wir bieten Full-Service
 								und arbeiten mit Ihnen stets Hand in Hand.
 							</p>
-							<h2 className="mb-4">NEuentwicklung</h2>
+							<h3 className="display-2 mb-4">NEuentwicklung</h3>
 							<p className="mb-8">
 								Wir entwickeln Ihren Webshop basierend auf bewährten,
 								skalierbaren Platformen wie SCAYLE oder Shopify auf. Dabei
@@ -32,7 +33,7 @@ export const Services2Section = () => {
 								Conversion-Verbesserung, Hosting und Betrieb.
 							</p>
 
-							<h2 className="mb-4">weiterentwicklunG</h2>
+							<h3 className="display-2 mb-4">weiterentwicklunG</h3>
 							<p className="mb-8">
 								Existierende Shops können wir übernehmen und weiterentwickeln.
 								Hierbei machen wir zunächst einen Checkup der bestehenden
@@ -40,7 +41,7 @@ export const Services2Section = () => {
 								Fundament für die Weiterentwicklung zu schaffen.
 							</p>
 
-							<h2 className="mb-4">maintenance & Betrieb</h2>
+							<h3 className="display-2 mb-4">maintenance & Betrieb</h3>
 							<p className="mb-8">
 								Wir betreuen und betreiben durch uns entwickelte oder bestehende
 								Webshops. Hierbei einigen wir uns mit Ihnen auf gemeinsame

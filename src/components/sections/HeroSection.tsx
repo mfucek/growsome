@@ -8,19 +8,19 @@ export const HeroSection = () => {
 				<div className="h-full w-full absolute -z-10 pr-8 pb-8">
 					<div className="relative h-full w-full">
 						<Image
-							src={
-								'https://images.unsplash.com/photo-1535401991746-da3d9055713e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMTIyMnwwfDF8c2VhcmNofDZ8fHN0b3JlZnJvbnR8ZW58MHx8fHwxNjcyMzA1NzE0&ixlib=rb-4.0.3&q=80&w=1080'
-							}
+							src={'/growsome1.jpg'}
 							alt={''}
 							fill
 							className="opacity-30"
 							style={{ objectFit: 'cover' }}
+							sizes={'(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
+							priority
 						/>
 					</div>
 				</div>
 				<div className="w-full h-full flex flex-col justify-center align-middle text-center">
-					<h1 className="mb-4">Richtig gute Storefronts</h1>
-					<h3>
+					<h2 className="display-1 display-1 mb-4">Richtig gute Storefronts</h2>
+					<h3 className="display-3">
 						growsome - Ihre Boutique-Agentur für Headless E-Commerce in Hamburg
 					</h3>
 				</div>

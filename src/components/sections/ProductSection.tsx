@@ -7,17 +7,16 @@ export const ProductSection = () => {
 			<div className="p-4">
 				<div className="h-[400px] relative mb-12">
 					<Image
-						src={
-							'https://pitch-assets-ccb95893-de3f-4266-973c-20049231b248.s3.eu-west-1.amazonaws.com/3c8739ed-0b32-4b59-830c-caa69e7717b2?pitch-bytes=2916650&pitch-content-type=image%2Fjpeg'
-						}
+						src={'/product.jpeg'}
 						fill
 						style={{ objectFit: 'cover' }}
 						alt={''}
+						sizes={'(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
 					/>
 				</div>
 				<div className="flex flex-col xl:flex-row xl:gap-12 px-4">
 					<div className="grow-0 shrink-0">
-						<h1 className="mb-8"> Über growsome</h1>
+						<h2 className="display-1 mb-8"> Über growsome</h2>
 					</div>
 					<div className="w-full">
 						<p>

@@ -8,20 +8,19 @@ export const AboutSection = () => {
 				<div className="relative grow w-full xl:h-auto h-[400px] xl:min-h-[80vh] xl:max-w-[600px]">
 					<div className="w-full h-full relative">
 						<Image
-							src={
-								'https://pitch-assets-ccb95893-de3f-4266-973c-20049231b248.s3.eu-west-1.amazonaws.com/51edb74b-2980-428d-a1f6-1d5d7234fcf7?pitch-bytes=3069880&pitch-content-type=image%2Fjpeg'
-							}
+							src={'/about.jpeg'}
 							fill
 							alt={''}
 							style={{ objectFit: 'cover' }}
+							sizes={'(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
 						/>
 					</div>
 				</div>
 				<div className="grow w-full">
 					<div className="px-6 h-full flex flex-col xl:justify-center">
-						<h1 className="mb-8">Auf einen Blick</h1>
+						<h2 className="display-1 display-1 mb-8">Auf einen Blick</h2>
 						<div>
-							<h2 className="mb-6">Ihr erfolg ist unser antrieb</h2>
+							<h3 className="display-2 mb-6">Ihr erfolg ist unser antrieb</h3>
 							<ul>
 								<li>
 									Wir sind Experten für digitale Transformation mit umfassender

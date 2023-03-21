@@ -2,6 +2,8 @@ import classNames from 'classnames';
 import { useEffect, useState } from 'react';
 import { Container } from './Container';
 
+import Image from 'next/image';
+
 export const Header = () => {
 	const [scrolled, setScrolled] = useState(false);
 	useEffect(() => {
@@ -19,7 +21,7 @@ export const Header = () => {
 	}, []);
 	return (
 		<>
-			<div className="fixed w-screen z-40">
+			<header className="fixed w-screen z-40">
 				<Container>
 					<div
 						className={classNames(
@@ -27,17 +29,10 @@ export const Header = () => {
 							scrolled && 'bg-white/80 backdrop-blur-md'
 						)}
 					>
-						<img
-							src="/logo.png"
-							alt="Growsome"
-							className="h-6 hover:translate-y-[-2px] active:translate-y-[4px] duration-300 active:duration-100 cursor-pointer hover:opacity-80 active:opacity-60"
-							onClick={() => {
-								window.scrollTo({ top: 0, behavior: 'smooth' });
-							}}
-						/>
+						<Image src={'/logo.png'} height={24} width={153} alt={''} />
 					</div>
 				</Container>
-			</div>
+			</header>
 		</>
 	);
 };
