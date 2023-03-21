@@ -1,11 +1,44 @@
+import classNames from 'classnames';
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 import { Container } from '../Container';
 
+let fakeScrolled = false;
+
 export const PartnerSection = () => {
+	const [scrolled, setScroled] = useState(false);
+	useEffect(() => {}, [fakeScrolled]);
+	useEffect(() => {
+		let a = setInterval(() => {
+			fakeScrolled =
+				document.querySelector('#__next')!.scrollTop -
+					ref.current!.offsetTop +
+					250 >
+				0;
+			setScroled(
+				(scrolled) =>
+					document.querySelector('#__next')!.scrollTop -
+						ref.current!.offsetTop +
+						250 >
+					0
+			);
+		}, 100);
+		return () => {
+			clearInterval(a);
+		};
+	}, []);
+
+	const ref = useRef<HTMLDivElement>(null);
 	return (
-		<Container>
+		<Container className="snap-start">
 			<h2 className="display-1 w-full text-center mb-8">Ihre Partner</h2>
-			<div className="px-4 flex flex-col lg:flex-row gap-4 w-full mb-16">
+			<div
+				className={classNames(
+					scrolled ? 'reveal-after' : 'reveal-before',
+					'px-4 flex flex-col lg:flex-row gap-4 w-full mb-16'
+				)}
+				ref={ref}
+			>
 				<div className="w-full grow mb-8 lg:mb-0">
 					<div className="relative w-full h-[200px]">
 						<Image
@@ -45,7 +78,12 @@ export const PartnerSection = () => {
 					</p>
 				</div>
 			</div>
-			<div className="p-4">
+			<div
+				className={classNames(
+					scrolled ? 'reveal-after' : 'reveal-before',
+					'p-4'
+				)}
+			>
 				<p className="display-3">
 					UNSER TEAM VON PROGRAMMIERERN WIRD DURCH AUSGESUCHTE EXPERTEN AUS
 					UNSEREM NETZWERK ERGÄNZT

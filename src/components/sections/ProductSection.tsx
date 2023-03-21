@@ -1,10 +1,37 @@
+import classNames from 'classnames';
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 import { Container } from '../Container';
 
+let fakeScrolled = false;
+
 export const ProductSection = () => {
+	const [scrolled, setScroled] = useState(false);
+	useEffect(() => {}, [fakeScrolled]);
+	useEffect(() => {
+		let a = setInterval(() => {
+			fakeScrolled =
+				document.querySelector('#__next')!.scrollTop -
+					ref.current!.offsetTop +
+					150 >
+				0;
+			setScroled(
+				(scrolled) =>
+					document.querySelector('#__next')!.scrollTop -
+						ref.current!.offsetTop +
+						150 >
+					0
+			);
+		}, 100);
+		return () => {
+			clearInterval(a);
+		};
+	}, []);
+
+	const ref = useRef<HTMLDivElement>(null);
 	return (
-		<Container>
-			<div className="p-4">
+		<Container className="snap-start">
+			<div className="p-4" ref={ref}>
 				<div className="h-[400px] relative mb-12">
 					<Image
 						src={'/product.jpeg'}
@@ -14,7 +41,12 @@ export const ProductSection = () => {
 						sizes={'(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
 					/>
 				</div>
-				<div className="flex flex-col xl:flex-row xl:gap-12 px-4">
+				<div
+					className={classNames(
+						scrolled ? 'reveal-after' : 'reveal-before',
+						'flex flex-col xl:flex-row xl:gap-12 px-4'
+					)}
+				>
 					<div className="grow-0 shrink-0">
 						<h2 className="display-1 mb-8"> Über growsome</h2>
 					</div>

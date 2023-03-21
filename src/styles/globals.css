@@ -10,6 +10,10 @@
 	padding: 0;
 }
 
+#__next {
+	@apply scroll-smooth snap-y snap-proximity h-screen overflow-x-hidden w-screen;
+}
+
 .display-1 {
 	@apply font-firaSans text-[32px] md:text-[60px] font-bold text-[#111111];
 }
@@ -33,4 +37,11 @@ ul {
 
 ul li {
 	@apply ml-4 mb-2;
+}
+
+.reveal-before {
+	@apply duration-300 opacity-0 translate-x-[-80px];
+}
+.reveal-after {
+	@apply duration-300 opacity-100 translate-x-[0px];
 }

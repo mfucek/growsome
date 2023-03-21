@@ -1,10 +1,37 @@
+import classNames from 'classnames';
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 import { Container } from '../Container';
 
+let fakeScrolled = false;
+
 export const Services2Section = () => {
+	const [scrolled, setScroled] = useState(false);
+	useEffect(() => {}, [fakeScrolled]);
+	useEffect(() => {
+		let a = setInterval(() => {
+			fakeScrolled =
+				document.querySelector('#__next')!.scrollTop -
+					ref.current!.offsetTop +
+					150 >
+				0;
+			setScroled(
+				(scrolled) =>
+					document.querySelector('#__next')!.scrollTop -
+						ref.current!.offsetTop +
+						150 >
+					0
+			);
+		}, 100);
+		return () => {
+			clearInterval(a);
+		};
+	}, []);
+
+	const ref = useRef<HTMLDivElement>(null);
 	return (
-		<Container>
-			<div className="flex flex-1 flex-col xl:flex-row p-4 gap-12">
+		<Container className="snap-start">
+			<div className="flex flex-1 flex-col xl:flex-row p-4 gap-12" ref={ref}>
 				<div className="relative grow w-full xl:h-auto h-[400px] xl:min-h-[80vh] xl:max-w-[600px]">
 					<div className="w-full h-full relative">
 						<Image
@@ -16,7 +43,12 @@ export const Services2Section = () => {
 						/>
 					</div>
 				</div>
-				<div className="grow w-full">
+				<div
+					className={classNames(
+						scrolled ? 'reveal-after' : 'reveal-before',
+						'grow w-full'
+					)}
+				>
 					<div className="px-2 md:px-6 h-full flex flex-col xl:justify-center">
 						<h2 className="display-1 mb-8">Unser Service</h2>
 						<div>

@@ -8,11 +8,8 @@ export const Header = () => {
 	const [scrolled, setScrolled] = useState(false);
 	useEffect(() => {
 		let a = setInterval(() => {
-			// console.log(document.documentElement.scrollTop);
-			// console.log(document.documentElement.clientHeight);
 			setScrolled(
-				document.documentElement.scrollTop >=
-					document.documentElement.clientHeight
+				document.querySelector('#__next')!.scrollTop >= window.innerHeight - 200
 			);
 		}, 100);
 		return () => {
@@ -22,10 +19,10 @@ export const Header = () => {
 	return (
 		<>
 			<header className="fixed w-screen z-40">
-				<Container>
+				<Container className="!pt-0">
 					<div
 						className={classNames(
-							'p-12 duration-300',
+							'p-8 md:p-12 duration-300',
 							scrolled && 'bg-white/80 backdrop-blur-md'
 						)}
 					>

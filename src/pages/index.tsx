@@ -18,16 +18,15 @@ export default function Home() {
 					content="Wir sind Experten für digitale Transformation mit umfassender Erfahrung im Bereich E-Commerce, Skalierung von Online-Plattformen und data driven Performance-Optimierung"
 				/>
 			</Head>
-			<div className="w-screen overflow-x-hidden">
-				<Header />
-				<HeroSection />
-				<AboutSection />
-				<ServicesSection />
-				<ProductSection />
-				<PartnerSection />
-				<Services2Section />
-				<ContactSection />
-			</div>
+
+			<Header />
+			<HeroSection />
+			<AboutSection />
+			<ServicesSection />
+			<ProductSection />
+			<PartnerSection />
+			<Services2Section />
+			<ContactSection />
 		</>
 	);
 }
