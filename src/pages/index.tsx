@@ -18,7 +18,6 @@ export default function Home() {
 					content="Wir sind Experten für digitale Transformation mit umfassender Erfahrung im Bereich E-Commerce, Skalierung von Online-Plattformen und data driven Performance-Optimierung"
 				/>
 			</Head>
-
 			<Header />
 			<HeroSection />
 			<AboutSection />
@@ -27,6 +26,7 @@ export default function Home() {
 			<PartnerSection />
 			<Services2Section />
 			<ContactSection />
+			<div className="w-full my-20"></div>
 		</>
 	);
 }

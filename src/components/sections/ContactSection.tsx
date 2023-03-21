@@ -11,15 +11,13 @@ export const ContactSection = () => {
 	useEffect(() => {
 		let a = setInterval(() => {
 			fakeScrolled =
-				document.querySelector('#__next')!.scrollTop -
-					ref.current!.offsetTop +
-					250 >
+				document.querySelector('#__next')!.scrollTop * 1.5 -
+					ref.current!.offsetTop >
 				0;
 			setScroled(
 				(scrolled) =>
-					document.querySelector('#__next')!.scrollTop -
-						ref.current!.offsetTop +
-						400 >
+					document.querySelector('#__next')!.scrollTop * 1.5 -
+						ref.current!.offsetTop >
 					0
 			);
 		}, 100);
@@ -32,7 +30,7 @@ export const ContactSection = () => {
 	return (
 		<Container className="snap-start">
 			<div
-				className="flex flex-1 flex-col p-4 gap-12 xl:flex-row-reverse"
+				className="flex flex-1 flex-col gap-12 xl:flex-row-reverse"
 				ref={ref}
 			>
 				<div className="relative grow w-full xl:h-auto h-[400px] xl:min-h-[80vh] xl:max-w-[600px]">
@@ -41,6 +39,7 @@ export const ContactSection = () => {
 							src={'/Growsome6.jpg'}
 							fill
 							alt={''}
+							className={classNames(scrolled ? 'scale-after' : 'scale-before')}
 							style={{ objectFit: 'cover' }}
 							sizes={'(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
 						/>
@@ -52,7 +51,7 @@ export const ContactSection = () => {
 						'grow w-full'
 					)}
 				>
-					<div className="px-2 md:px-6 h-full flex flex-col xl:justify-center">
+					<div className="px-6 md:px-6 h-full flex flex-col xl:justify-center">
 						<h2 className="display-1 display-1 mb-8">Kontakt</h2>
 						<div>
 							<p className="mb-20">

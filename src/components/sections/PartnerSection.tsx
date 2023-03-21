@@ -11,15 +11,13 @@ export const PartnerSection = () => {
 	useEffect(() => {
 		let a = setInterval(() => {
 			fakeScrolled =
-				document.querySelector('#__next')!.scrollTop -
-					ref.current!.offsetTop +
-					250 >
+				document.querySelector('#__next')!.scrollTop * 1.5 -
+					ref.current!.offsetTop >
 				0;
 			setScroled(
 				(scrolled) =>
-					document.querySelector('#__next')!.scrollTop -
-						ref.current!.offsetTop +
-						250 >
+					document.querySelector('#__next')!.scrollTop * 1.5 -
+						ref.current!.offsetTop >
 					0
 			);
 		}, 100);
@@ -44,7 +42,10 @@ export const PartnerSection = () => {
 						<Image
 							src="/Portrait1.png"
 							alt="Image Not Found"
-							className="w-full"
+							className={classNames(
+								scrolled ? 'scale-after' : 'scale-before',
+								'w-full'
+							)}
 							fill
 							style={{ objectFit: 'contain' }}
 							sizes={'(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
@@ -63,7 +64,10 @@ export const PartnerSection = () => {
 						<Image
 							src="/Portrait2.png"
 							alt="Image Not Found"
-							className="w-full"
+							className={classNames(
+								scrolled ? 'scale-after' : 'scale-before',
+								'w-full'
+							)}
 							fill
 							style={{ objectFit: 'contain' }}
 							sizes={'(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}

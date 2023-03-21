@@ -11,15 +11,13 @@ export const ServicesSection = () => {
 	useEffect(() => {
 		let a = setInterval(() => {
 			fakeScrolled =
-				document.querySelector('#__next')!.scrollTop -
-					ref.current!.offsetTop +
-					250 >
+				document.querySelector('#__next')!.scrollTop * 1.5 -
+					ref.current!.offsetTop >
 				0;
 			setScroled(
 				(scrolled) =>
-					document.querySelector('#__next')!.scrollTop -
-						ref.current!.offsetTop +
-						250 >
+					document.querySelector('#__next')!.scrollTop * 1.5 -
+						ref.current!.offsetTop >
 					0
 			);
 		}, 100);
@@ -53,7 +51,10 @@ export const ServicesSection = () => {
 							style={{ objectFit: 'cover' }}
 							src="/services1.jpeg"
 							alt="Image Not Found"
-							className="w-full"
+							className={classNames(
+								scrolled ? 'scale-after' : 'scale-before',
+								'w-full'
+							)}
 							sizes={'(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
 						/>
 					</div>
@@ -73,7 +74,10 @@ export const ServicesSection = () => {
 							style={{ objectFit: 'cover' }}
 							src="/services2.jpeg"
 							alt="Image Not Found"
-							className="w-full"
+							className={classNames(
+								scrolled ? 'scale-after' : 'scale-before',
+								'w-full'
+							)}
 							sizes={'(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
 						/>
 					</div>
@@ -92,7 +96,10 @@ export const ServicesSection = () => {
 							style={{ objectFit: 'cover' }}
 							src="/services3.jpeg"
 							alt="Image Not Found"
-							className="w-full"
+							className={classNames(
+								scrolled ? 'scale-after' : 'scale-before',
+								'w-full'
+							)}
 							sizes={'(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
 						/>
 					</div>

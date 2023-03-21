@@ -11,7 +11,8 @@
 }
 
 #__next {
-	@apply scroll-smooth snap-y snap-proximity h-screen overflow-x-hidden w-screen;
+	@apply scroll-smooth h-screen overflow-x-hidden w-screen;
+	/* snap-y snap-proximity */
 }
 
 .display-1 {
@@ -40,8 +41,14 @@ ul li {
 }
 
 .reveal-before {
-	@apply duration-300 opacity-0 translate-x-[-80px];
+	@apply duration-1000 opacity-0 translate-x-[-80px];
 }
 .reveal-after {
-	@apply duration-300 opacity-100 translate-x-[0px];
+	@apply duration-1000 opacity-100 translate-x-[0px];
+}
+.scale-before {
+	@apply duration-[1400ms] opacity-0 scale-[120%];
+}
+.scale-after {
+	@apply duration-[1400ms] opacity-100 scale-[100%];
 }

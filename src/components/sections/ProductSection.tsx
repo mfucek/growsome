@@ -11,15 +11,13 @@ export const ProductSection = () => {
 	useEffect(() => {
 		let a = setInterval(() => {
 			fakeScrolled =
-				document.querySelector('#__next')!.scrollTop -
-					ref.current!.offsetTop +
-					250 >
+				document.querySelector('#__next')!.scrollTop * 1.5 -
+					ref.current!.offsetTop >
 				0;
 			setScroled(
 				(scrolled) =>
-					document.querySelector('#__next')!.scrollTop -
-						ref.current!.offsetTop +
-						250 >
+					document.querySelector('#__next')!.scrollTop * 1.5 -
+						ref.current!.offsetTop >
 					0
 			);
 		}, 100);
@@ -31,11 +29,12 @@ export const ProductSection = () => {
 	const ref = useRef<HTMLDivElement>(null);
 	return (
 		<Container className="snap-start">
-			<div className="p-4" ref={ref}>
+			<div className="" ref={ref}>
 				<div className="h-[400px] relative mb-12">
 					<Image
 						src={'/product.jpeg'}
 						fill
+						className={classNames(scrolled ? 'scale-after' : 'scale-before')}
 						style={{ objectFit: 'cover' }}
 						alt={''}
 						sizes={'(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
@@ -44,7 +43,7 @@ export const ProductSection = () => {
 				<div
 					className={classNames(
 						scrolled ? 'reveal-after' : 'reveal-before',
-						'flex flex-col xl:flex-row xl:gap-12 px-4'
+						'flex flex-col xl:flex-row xl:gap-12 px-6'
 					)}
 				>
 					<div className="grow-0 shrink-0">
