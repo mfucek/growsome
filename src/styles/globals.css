@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	@apply font-firaSans text-[60px] font-bold text-[#111111];
+}
+
+h2 {
+	@apply font-workSans text-[30px] text-[#111111] tracking-[0.15em] uppercase;
+}
+
+h3 {
+	@apply font-firaSans text-[28px] text-[#111111] tracking-[0.1em];
+}
+
+p,
+li {
+	@apply font-firaSans  text-[28px] leading-[33px] text-[#5d5d5d];
+}
+
+ul {
+	@apply list-disc;
+}
+
+ul li {
+	@apply ml-4 mb-2;
+}
