@@ -11,11 +11,13 @@ export const AboutSection = () => {
 	useEffect(() => {
 		let a = setInterval(() => {
 			fakeScrolled =
-				document.querySelector('#__next')!.scrollTop * 1.5 -
+				document.querySelector('#__next')!.scrollTop +
+					window.innerHeight * 0.8 -
 					ref.current!.offsetTop >
 				0;
 			setScroled(
-				document.querySelector('#__next')!.scrollTop * 1.5 -
+				document.querySelector('#__next')!.scrollTop +
+					window.innerHeight * 0.8 -
 					ref.current!.offsetTop >
 					0
 			);
