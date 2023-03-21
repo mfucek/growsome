@@ -11,12 +11,12 @@ export const ContactSection = () => {
 	useEffect(() => {
 		let a = setInterval(() => {
 			fakeScrolled =
-				document.querySelector('#__next')!.scrollTop * 1.5 -
+				document.querySelector('#__next')!.scrollTop * 1.1 -
 					ref.current!.offsetTop >
 				0;
 			setScroled(
 				(scrolled) =>
-					document.querySelector('#__next')!.scrollTop * 1.5 -
+					document.querySelector('#__next')!.scrollTop * 1.1 -
 						ref.current!.offsetTop >
 					0
 			);

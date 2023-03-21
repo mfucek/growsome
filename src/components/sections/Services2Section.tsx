@@ -11,12 +11,12 @@ export const Services2Section = () => {
 	useEffect(() => {
 		let a = setInterval(() => {
 			fakeScrolled =
-				document.querySelector('#__next')!.scrollTop * 1.5 -
+				document.querySelector('#__next')!.scrollTop * 1.2 -
 					ref.current!.offsetTop >
 				0;
 			setScroled(
 				(scrolled) =>
-					document.querySelector('#__next')!.scrollTop * 1.5 -
+					document.querySelector('#__next')!.scrollTop * 1.2 -
 						ref.current!.offsetTop >
 					0
 			);

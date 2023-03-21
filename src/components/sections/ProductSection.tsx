@@ -29,7 +29,7 @@ export const ProductSection = () => {
 	const ref = useRef<HTMLDivElement>(null);
 	return (
 		<Container className="snap-start">
-			<div className="" ref={ref}>
+			<div className="min-h-screen flex flex-col justify-center" ref={ref}>
 				<div className="h-[400px] relative mb-12">
 					<Image
 						src={'/product.jpeg'}

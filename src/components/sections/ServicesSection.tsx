@@ -28,7 +28,7 @@ export const ServicesSection = () => {
 
 	const ref = useRef<HTMLDivElement>(null);
 	return (
-		<Container className="snap-start">
+		<Container className="snap-start min-h-screen flex flex-col justify-center">
 			<h2
 				className={classNames(
 					scrolled ? 'reveal-after' : 'reveal-before',

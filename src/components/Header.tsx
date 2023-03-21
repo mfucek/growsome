@@ -18,14 +18,14 @@ export const Header = () => {
 	}, []);
 	return (
 		<>
-			<header className="fixed w-screen z-40">
-				<Container className="!pt-0">
-					<div
-						className={classNames(
-							'p-8 md:p-12 duration-300',
-							scrolled && 'bg-white/80 backdrop-blur-md'
-						)}
-					>
+			<header
+				className={classNames(
+					scrolled && 'bg-white/80 backdrop-blur-md',
+					'fixed w-screen z-40 duration-300'
+				)}
+			>
+				<Container className="!py-0 min-h-0">
+					<div className={classNames('p-8 md:p-12')}>
 						<Image
 							src={'/logo.png'}
 							height={24}

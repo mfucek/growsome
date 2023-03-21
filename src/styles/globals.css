@@ -29,7 +29,7 @@
 
 p,
 li {
-	@apply font-firaSans text-[16px] md:text-[28px] leading-[28px] md:leading-[33px] text-[#5d5d5d];
+	@apply font-firaSans text-[22px] md:text-[28px] leading-[28px] md:leading-[33px] text-[#5d5d5d];
 }
 
 ul {
