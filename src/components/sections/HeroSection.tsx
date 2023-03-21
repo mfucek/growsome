@@ -14,7 +14,7 @@ export const HeroSection = () => {
 		<>
 			<div className="relative">
 				<div className="w-full absolute -z-10">
-					<div className="relative h-screen w-full">
+					<div className="relative h-[80vh] w-full">
 						<Image
 							src={'/growsome1.jpg'}
 							alt={''}

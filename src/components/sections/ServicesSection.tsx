@@ -40,7 +40,7 @@ export const ServicesSection = () => {
 			<div
 				className={classNames(
 					scrolled ? 'reveal-after' : 'reveal-before',
-					'px-4 flex flex-col lg:flex-row gap-4 w-full'
+					'flex flex-col lg:flex-row gap-4 w-full'
 				)}
 				ref={ref}
 			>
