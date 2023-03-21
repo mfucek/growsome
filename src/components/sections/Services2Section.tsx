@@ -13,13 +13,13 @@ export const Services2Section = () => {
 			fakeScrolled =
 				document.querySelector('#__next')!.scrollTop -
 					ref.current!.offsetTop +
-					150 >
+					250 >
 				0;
 			setScroled(
 				(scrolled) =>
 					document.querySelector('#__next')!.scrollTop -
 						ref.current!.offsetTop +
-						150 >
+						250 >
 					0
 			);
 		}, 100);
@@ -43,13 +43,13 @@ export const Services2Section = () => {
 						/>
 					</div>
 				</div>
-				<div
-					className={classNames(
-						scrolled ? 'reveal-after' : 'reveal-before',
-						'grow w-full'
-					)}
-				>
-					<div className="px-2 md:px-6 h-full flex flex-col xl:justify-center">
+				<div className="grow w-full">
+					<div
+						className={classNames(
+							scrolled ? 'reveal-after' : 'reveal-before',
+							'px-2 md:px-6 h-full flex flex-col xl:justify-center'
+						)}
+					>
 						<h2 className="display-1 mb-8">Unser Service</h2>
 						<div>
 							<p className="mb-8">

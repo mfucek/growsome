@@ -13,7 +13,7 @@ export const ContactSection = () => {
 			fakeScrolled =
 				document.querySelector('#__next')!.scrollTop -
 					ref.current!.offsetTop +
-					150 >
+					250 >
 				0;
 			setScroled(
 				(scrolled) =>

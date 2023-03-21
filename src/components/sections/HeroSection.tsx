@@ -13,13 +13,13 @@ export const HeroSection = () => {
 			fakeScrolled =
 				document.querySelector('#__next')!.scrollTop -
 					ref.current!.offsetTop +
-					150 >
+					250 >
 				0;
 			setScroled(
 				(scrolled) =>
 					document.querySelector('#__next')!.scrollTop -
 						ref.current!.offsetTop +
-						150 >
+						250 >
 					0
 			);
 		}, 100);
