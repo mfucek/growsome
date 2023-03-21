@@ -33,7 +33,9 @@ export const Header = () => {
 							alt={''}
 							className="hover:translate-y-[-2px] active:translate-y-[4px] duration-300 active:duration-100 cursor-pointer hover:opacity-80 active:opacity-60"
 							onClick={() => {
-								window.scrollTo({ top: 0, behavior: 'smooth' });
+								document
+									.querySelector('#__next')!
+									.scrollTo({ top: 0, behavior: 'smooth' });
 							}}
 						/>
 					</div>
